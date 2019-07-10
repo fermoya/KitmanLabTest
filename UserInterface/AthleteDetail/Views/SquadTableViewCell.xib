@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="SquadTableViewCell" customModule="UserInterface" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="409" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-py-1jS">
+                        <rect key="frame" x="16" y="16" width="43.5" height="22.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wef-o0-Wl6">
+                        <rect key="frame" x="351" y="17" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HFV-py-1jS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1bO-eR-iwm"/>
+                    <constraint firstItem="wef-o0-Wl6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HFV-py-1jS" secondAttribute="trailing" constant="16" id="3by-gm-fK1"/>
+                    <constraint firstAttribute="trailing" secondItem="wef-o0-Wl6" secondAttribute="trailing" constant="16" id="3cM-3u-BXR"/>
+                    <constraint firstItem="HFV-py-1jS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="pT1-ZA-2Wm"/>
+                    <constraint firstItem="HFV-py-1jS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tiT-bt-hSQ"/>
+                    <constraint firstItem="wef-o0-Wl6" firstAttribute="centerY" secondItem="HFV-py-1jS" secondAttribute="centerY" id="xWL-cQ-vAv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="creationDate" destination="wef-o0-Wl6" id="cYB-ay-GlM"/>
+                <outlet property="name" destination="HFV-py-1jS" id="faX-7q-SAF"/>
+            </connections>
+            <point key="canvasLocation" x="202.17391304347828" y="130.24553571428572"/>
+        </tableViewCell>
+    </objects>
+</document>

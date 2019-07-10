@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Kingfisher (5.6.0)
+  - Mockingjay (3.0.0-alpha.1):
+    - Mockingjay/Core (= 3.0.0-alpha.1)
+    - Mockingjay/XCTest (= 3.0.0-alpha.1)
+  - Mockingjay/Core (3.0.0-alpha.1):
+    - URITemplate (~> 3.0)
+  - Mockingjay/XCTest (3.0.0-alpha.1):
+    - Mockingjay/Core
+  - SpinKitFramework (1.0.1)
+  - URITemplate (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - Mockingjay (~> 3.0.0-alpha.1)
+  - SpinKitFramework
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - Mockingjay
+    - SpinKitFramework
+    - URITemplate
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+  Mockingjay: 0f7c5aa49c7f1b95621cee3c79b557141f5a225c
+  SpinKitFramework: 43a17598c4563956f74bfea13fcf07ab44ce856a
+  URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
+
+PODFILE CHECKSUM: e8a43140b17a59811004363d065e944e79d4f7f2
+
+COCOAPODS: 1.7.1

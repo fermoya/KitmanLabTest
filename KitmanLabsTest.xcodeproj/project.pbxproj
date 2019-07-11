@@ -59,6 +59,7 @@
 		B0A58EEE22D6567A009E98B0 /* AtlhetesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A58EED22D6567A009E98B0 /* AtlhetesResponse.swift */; };
 		B0A58EF022D656BA009E98B0 /* SquadsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A58EEF22D656BA009E98B0 /* SquadsResponse.swift */; };
 		B0A58EF222D656EE009E98B0 /* AthletesAndSquadsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A58EF122D656EE009E98B0 /* AthletesAndSquadsResponse.swift */; };
+		B0D2C89122D727A8009A743F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A58E8122D5FCE7009E98B0 /* Assets.xcassets */; };
 		B0EEC73E22D715FA0067A7BE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EEC73C22D715FA0067A7BE /* SplashViewController.swift */; };
 		B0EEC73F22D715FA0067A7BE /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EEC73D22D715FA0067A7BE /* SplashViewController.xib */; };
 		B0EEC74222D718580067A7BE /* RevealTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EEC74122D718580067A7BE /* RevealTransition.swift */; };
@@ -754,6 +755,7 @@
 				B0EEC73F22D715FA0067A7BE /* SplashViewController.xib in Resources */,
 				B0500C0422D6618C00C06439 /* LoginViewController.xib in Resources */,
 				B0500C2D22D6777B00C06439 /* AthletesViewController.xib in Resources */,
+				B0D2C89122D727A8009A743F /* Assets.xcassets in Resources */,
 				B0500C3522D67E7E00C06439 /* AthleteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

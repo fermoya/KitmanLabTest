@@ -51,6 +51,7 @@ class AthletesViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.hidesBackButton = true
+        title = "Athletes"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,6 +72,9 @@ extension AthletesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AthleteTableViewCell.className) as! AthleteTableViewCell
         cell.athlete = athletes![indexPath.row]
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .white : UIColor(red: 243 / 255,
+                                                                         green: 238 / 255,
+                                                                         blue: 235 / 255, alpha: 1)
         return cell
     }
     

@@ -22,6 +22,7 @@ class AthletesViewController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
+            tableView.alpha = 0
         }
     }
     
@@ -103,10 +104,10 @@ extension AthletesViewController: AthletesViewModelObserver {
         guard !athletes.isEmpty else {
             return showEmptyStateView()
         }
-        UIView.animate(withDuration: 0.4) { [weak self] in
+        UIView.animateKeyframes(withDuration: 0.4, delay: 0.3, options: [], animations: { [weak self] in
             self?.tableView.alpha = 1
             self?.spinner.alpha = 0
-        }
+        }, completion: nil)
         
         self.athletes = athletes
         tableView.reloadData()

@@ -14,7 +14,7 @@ import SpinKitFramework
 public class LoginViewController: UIViewController {
 
     @IBOutlet weak var spinner: ChasingDotsSpinner! { didSet { spinner.isHidden = true } }
-    @IBOutlet weak var loginButton: Button!
+    @IBOutlet weak var loginButton: Button! { didSet { loginButton.adjustsImageWhenHighlighted = false } }
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -30,6 +30,29 @@ public class LoginViewController: UIViewController {
         spinner.isHidden = false
         spinner.startLoading()
         viewModel.login(with: email, password: password)
+    }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        loginButton.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
+        emailTextField.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
+        passwordTextField.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animateKeyframes(withDuration: 0.6, delay: 0.2, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.6, animations: { [weak self] in
+                self?.emailTextField.transform = .identity
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.8, animations: { [weak self] in
+                self?.passwordTextField.transform = .identity
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 1, animations: { [weak self] in
+                self?.loginButton.transform = .identity
+            })
+        }, completion: nil)
     }
     
     public init() {

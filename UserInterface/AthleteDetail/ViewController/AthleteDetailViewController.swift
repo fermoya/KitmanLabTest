@@ -38,6 +38,11 @@ class AthleteDetailViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Detail"
+    }
 
     private func setUpUI() {
         thumbnail.kf.setImage(with: URL(string: athlete.imageUrl)!)
@@ -60,6 +65,9 @@ extension AthleteDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SquadTableViewCell.className) as! SquadTableViewCell
         cell.squad = athlete.squads[indexPath.row]
+        cell.backgroundColor = indexPath.row % 2 == 1 ? .white : UIColor(red: 243 / 255,
+                                                                         green: 238 / 255,
+                                                                         blue: 235 / 255, alpha: 1)
         return cell
     }
     

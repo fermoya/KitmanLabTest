@@ -10,8 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="KitmanLabsTest" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="UserInterface" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="IlE-0F-zaZ" id="6Wa-SC-Eb9"/>
                 <outlet property="emailTextField" destination="ju7-aY-Oc9" id="hJ8-Uz-1kZ"/>
                 <outlet property="loginButton" destination="udR-S8-S9g" id="0XB-lO-fn2"/>
                 <outlet property="passwordTextField" destination="NdB-vb-USq" id="t2K-Aw-l1O"/>
@@ -25,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-background" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-0F-zaZ">
-                    <rect key="frame" x="199" y="445" width="16" height="16"/>
+                    <rect key="frame" x="-417" y="-26.5" width="1248" height="959"/>
                 </imageView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJx-O9-GiT">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -65,7 +66,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-S8-S9g" customClass="Button" customModule="KitmanLabsTest" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-S8-S9g" customClass="Button" customModule="UserInterface" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="124" width="350" height="40"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

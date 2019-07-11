@@ -20,8 +20,18 @@ class SquadTableViewCell: UITableViewCell {
         name.text = squad.name
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        creationDate.text = "Since \(dateFormatter.string(from: squad.creationDate))"
+        dateFormatter.dateFormat = "yy-MM-dd"
+        dateFormatter.dateStyle = .long
+        
+        let date = dateFormatter.string(from: squad.creationDate)
+        let attributedText = NSMutableAttributedString(string: "Since \(date)")
+        attributedText.addAttribute(.font,
+                                    value: UIFont.systemFont(ofSize: 15),
+                                    range: NSRange(location: 0, length: 6))
+        attributedText.addAttribute(.font,
+                                    value: UIFont.italicSystemFont(ofSize: 15),
+                                    range: NSRange(location: 6, length: date.count))
+        creationDate.attributedText = attributedText
     }
     
 }

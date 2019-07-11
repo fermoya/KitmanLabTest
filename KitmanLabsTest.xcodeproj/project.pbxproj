@@ -59,6 +59,10 @@
 		B0A58EEE22D6567A009E98B0 /* AtlhetesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A58EED22D6567A009E98B0 /* AtlhetesResponse.swift */; };
 		B0A58EF022D656BA009E98B0 /* SquadsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A58EEF22D656BA009E98B0 /* SquadsResponse.swift */; };
 		B0A58EF222D656EE009E98B0 /* AthletesAndSquadsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A58EF122D656EE009E98B0 /* AthletesAndSquadsResponse.swift */; };
+		B0D2C89122D727A8009A743F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A58E8122D5FCE7009E98B0 /* Assets.xcassets */; };
+		B0EEC73E22D715FA0067A7BE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EEC73C22D715FA0067A7BE /* SplashViewController.swift */; };
+		B0EEC73F22D715FA0067A7BE /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EEC73D22D715FA0067A7BE /* SplashViewController.xib */; };
+		B0EEC74222D718580067A7BE /* RevealTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EEC74122D718580067A7BE /* RevealTransition.swift */; };
 		E9AB8774EAFF9773A6485258 /* Pods_KitmanLabsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD109FB02E891C9C999001 /* Pods_KitmanLabsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +180,9 @@
 		B0A58EED22D6567A009E98B0 /* AtlhetesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlhetesResponse.swift; sourceTree = "<group>"; };
 		B0A58EEF22D656BA009E98B0 /* SquadsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadsResponse.swift; sourceTree = "<group>"; };
 		B0A58EF122D656EE009E98B0 /* AthletesAndSquadsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesAndSquadsResponse.swift; sourceTree = "<group>"; };
+		B0EEC73C22D715FA0067A7BE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B0EEC73D22D715FA0067A7BE /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		B0EEC74122D718580067A7BE /* RevealTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealTransition.swift; sourceTree = "<group>"; };
 		BD1CF7ADCBC4AEA65D701D90 /* Pods-KitmanLabsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitmanLabsTest.debug.xcconfig"; path = "Target Support Files/Pods-KitmanLabsTest/Pods-KitmanLabsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E9F3FDA0A4F76B26FE606F72 /* Pods_RepositoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -397,6 +404,7 @@
 		B0A58E9C22D6151B009E98B0 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				B0EEC73B22D715A00067A7BE /* Splash */,
 				B0500C2E22D67BFD00C06439 /* AthleteDetail */,
 				B0500C0722D6640400C06439 /* Athletes */,
 				B0A58EAA22D616A6009E98B0 /* Login */,
@@ -486,6 +494,24 @@
 				B0A58EF122D656EE009E98B0 /* AthletesAndSquadsResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B0EEC73B22D715A00067A7BE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B0EEC74022D718490067A7BE /* Transition */,
+				B0EEC73C22D715FA0067A7BE /* SplashViewController.swift */,
+				B0EEC73D22D715FA0067A7BE /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B0EEC74022D718490067A7BE /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				B0EEC74122D718580067A7BE /* RevealTransition.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,8 +752,10 @@
 				B0500C4522D68B3500C06439 /* SquadTableViewCell.xib in Resources */,
 				B0500C3B22D6832C00C06439 /* AthleteDetailViewController.xib in Resources */,
 				B0500C0622D6637D00C06439 /* Media.xcassets in Resources */,
+				B0EEC73F22D715FA0067A7BE /* SplashViewController.xib in Resources */,
 				B0500C0422D6618C00C06439 /* LoginViewController.xib in Resources */,
 				B0500C2D22D6777B00C06439 /* AthletesViewController.xib in Resources */,
+				B0D2C89122D727A8009A743F /* Assets.xcassets in Resources */,
 				B0500C3522D67E7E00C06439 /* AthleteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,10 +934,12 @@
 				B0500C2C22D6777B00C06439 /* AthletesViewController.swift in Sources */,
 				B0500C3422D67E7E00C06439 /* AthleteTableViewCell.swift in Sources */,
 				B0500C0222D6618500C06439 /* LoginViewController.swift in Sources */,
+				B0EEC73E22D715FA0067A7BE /* SplashViewController.swift in Sources */,
 				B0500C4422D68B3500C06439 /* SquadTableViewCell.swift in Sources */,
 				B0500C0E22D665B000C06439 /* UIViewController+UIAlertController.swift in Sources */,
 				B0500BFF22D6615900C06439 /* LoginViewModel.swift in Sources */,
 				B0500C3A22D6832C00C06439 /* AthleteDetailViewController.swift in Sources */,
+				B0EEC74222D718580067A7BE /* RevealTransition.swift in Sources */,
 				B0500C3722D6828C00C06439 /* NSObject+Classname.swift in Sources */,
 				B0500C1222D66C5900C06439 /* AthletesViewModel.swift in Sources */,
 				B0500C0A22D6653E00C06439 /* Button.swift in Sources */,

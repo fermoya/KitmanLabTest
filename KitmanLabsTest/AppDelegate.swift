@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
-        let loginViewController = LoginViewController()
+        let loginViewController = SplashViewController()
         let navigationController = UINavigationController(rootViewController: loginViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         window.rootViewController = navigationController

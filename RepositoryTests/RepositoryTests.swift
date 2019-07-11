@@ -64,8 +64,7 @@ class RepositoryTests: XCTestCase {
 
         waitForExpectations(timeout: 3)
         XCTAssertNotNil(output)
-//        XCTAssertEqual(result!, WebserviceError.badRequest)
-
+        XCTAssertEqual(output!, WebserviceError.badRequest)
     }
 
 }

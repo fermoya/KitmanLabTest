@@ -15,7 +15,7 @@ typealias HttpDataResult = Swift.Result<Data, WebserviceError>
 public typealias HttpAcknowledgementResult = Swift.Result<Bool, WebserviceError>
 public typealias AthletesResult = Swift.Result<[Domain.Athlete], WebserviceError>
 
-public enum WebserviceError: Error {
+public enum WebserviceError: Error, Equatable {
     case unknown(String)
     case badRequest
     case unauthorized
@@ -65,32 +65,30 @@ public class Webservice {
         request(urlRequest)
             .responseJSON { [weak self] (dataResponse) in
                 guard let self = self else { return }
-                guard let data = dataResponse.data else {
-                    if let error = self.findErrors(in: dataResponse) {
-                        return completion(.failure(error))
-                    } else {
-                        return completion(.failure(.unknown("Empty response")))
-                    }
-                }
-                
-                completion(.success(data))
-        }
+                let result = self.processHttpResponse(dataResponse)
+                completion(result)
+            }
     }
     
     private func get(from endpoint: Endpoint, completion: @escaping (HttpDataResult) -> Void) {
         request(endpoint.url)
             .responseJSON { [weak self] (dataResponse) in
                 guard let self = self else { return }
-                guard let data = dataResponse.data else {
-                    if let error = self.findErrors(in: dataResponse) {
-                        return completion(.failure(error))
-                    } else {
-                        return completion(.failure(.unknown("Empty response")))
-                    }
-                }
-                
-                completion(.success(data))
+                let result = self.processHttpResponse(dataResponse)
+                completion(result)
         }
+    }
+    
+    private func processHttpResponse<T>(_ dataResponse: DataResponse<T>) -> HttpDataResult {
+        let error = self.findErrors(in: dataResponse)
+        guard error == nil else {
+            return .failure(error!)
+        }
+        guard let data = dataResponse.data else {
+            return .failure(.unknown("Empty response"))
+        }
+        
+        return .success(data)
     }
     
     private func findErrors<T>(in dataResponse: DataResponse<T>) -> WebserviceError? {
